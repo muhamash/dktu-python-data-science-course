@@ -7,10 +7,8 @@ class Vector:
     # TODO: Code has been removed from here.
 
     def __init__(self, x, y):
-        """Initialize the Vector with x and y coordinates."""
         self.x = x
         self.y = y
 
     def dot(self, v):
-        """Compute the dot product of self and v."""
         return self.x * v.x + self.y * v.y

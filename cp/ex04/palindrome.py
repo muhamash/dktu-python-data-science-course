@@ -1,14 +1,17 @@
 """Exercise 4.3: Checking if a word is a palindrome."""
 
-def is_palindrome(word : str) -> bool:
-    """Check if ``word`` is a palindrome.
 
-    :param word: The word to check
-    :return: ``True`` if input is a palindrome and otherwise ``False``
-    """
-    # TODO: Code has been removed from here. 
+def is_palindrome(word):
+    # Convert the word to lowercase to ignore case sensitivity
+    word = word.lower()
 
-if __name__ == "__main__":
-    # here you can try out your functions
-    print("Is Madam a palindrome?", is_palindrome('madam'))
-    print("Is gentleman a palindrome?", is_palindrome('gentleman'))
+    # Reverse the word
+    reversed_word = word[::-1]
+
+    # Check if the original word and the reversed word are the same
+    return word == reversed_word
+
+
+# Test cases
+print(is_palindrome("madam"))  # Output: True
+print(is_palindrome("gentleman"))  # Output: False
