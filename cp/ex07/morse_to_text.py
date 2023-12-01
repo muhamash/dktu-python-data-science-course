@@ -1,9 +1,46 @@
-"""Exercise 7.8: Morse code."""
+def morse_to_text(data: str) -> str:
+    morse_code_dict = {
+        ".-": "A",
+        "-...": "B",
+        "-.-.": "C",
+        "-..": "D",
+        ".": "E",
+        "..-.": "F",
+        "--.": "G",
+        "....": "H",
+        "..": "I",
+        ".---": "J",
+        "-.-": "K",
+        ".-..": "L",
+        "--": "M",
+        "-.": "N",
+        "---": "O",
+        ".--.": "P",
+        "--.-": "Q",
+        ".-.": "R",
+        "...": "S",
+        "-": "T",
+        "..-": "U",
+        "...-": "V",
+        ".--": "W",
+        "-..-": "X",
+        "-.--": "Y",
+        "--..": "Z",
+    }
 
-def morse_to_text(morse_code : str) -> str:
-    """Return the extracted message from its Morse code.
+    each_data = data.split("  ")
+    # print(each_data)
+    my_decoded_code = []
+    for data in each_data:
+        get_data = data.split(" ")
+        print(get_data)
+        my_code = ""
+        for i in get_data:
+            # print(i)
+            my_code = my_code + morse_code_dict[i]
+        # return my_code
+        my_decoded_code.append(my_code)
+    return " ".join(my_decoded_code)
 
-    :param morse_code: String with the initial message encoded in Morse. 
-    :return: The decoded message.
-    """
-    # TODO: Code has been removed from here. 
+
+print(morse_to_text("..  .- --  .-  ... --.- ..- .. .-. .-. . .-.."))

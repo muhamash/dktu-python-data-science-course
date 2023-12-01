@@ -1,14 +1,24 @@
 """Exercise 6.2: Letter histogram."""
 
-def letter_histogram(input_string : str) -> dict:
+
+def letter_histogram(input_string: str) -> dict:
     """Return the histogram of letter occurrences.
-    
+
     :param input_string: The word based on which the letter histogram is calculated.
     :return: The alphabet characters as keys with their corresponding occurrences as values.
     """
-    # TODO: Code has been removed from here. 
+    # TODO: Code has been removed from here.
+    histogram = {}
+    input_string = input_string.lower()
+
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    count = 0
+    for i in alphabet:
+        count = input_string.count(i)
+        histogram[i] = count
+    return histogram
 
 
-if __name__ == "__main__":
-    # here you can try out your functions
-    print("What is the letter histogram of the word banana?",  letter_histogram('banana'))
+# if __name__ == "__main__":
+# here you can try out your functions
+print(letter_histogram("sanjida"))
